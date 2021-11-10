@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"golang.org/x/crypto/ssh"
 )
 
