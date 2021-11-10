@@ -43,14 +43,19 @@ func GetClientWithKey(dev Device) (c *ssh.Client, err error) {
 	return ssh.Dial("tcp", dev.Host, config)
 }
 
-func Execute(c *ssh.Client, cmds []string) (results []string, error) {
+func GetSession(c *ssh.Client) (*ssh.Session, error) {
+	return c.NewSession()
+}
+
+func Execute(c *ssh.Client, cmd string) (string, error) {
 	sess, err := c.NewSession()
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 	defer sess.Close()
-	for _, cmd := range cmds {
-		results := append(results, string(sess.CombinedOutput(cmd)))
+	out, err := sess.CombinedOutput(cmd)
+	if err != nil {
+		return "", err
 	}
-	// return sess.CombinedOutput(cmd)
+	return string(out), err
 }

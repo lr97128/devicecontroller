@@ -1,18 +1,18 @@
 [
     {
-        "host": "10.188.88.195:22",
+        "host": "10.199.99.140:22",
         "username": "root",
-        "CiphPass": "gCecRlQk0MmQ9Pcwnsfjsg==",
+        "CiphPass": "yCjrCSibGdyU4WY0lQtcKw==",
         "secret": "0123456789asdfgh",
         "UseKey": false,
-        "command": ["uptime", "ls /root/"]
+        "commands": ["uptime", "ls /root/"]
     },
     {
-        "host": "10.188.88.193:22",
+        "host": "10.199.99.141:22",
         "username": "root",
-        "CiphPass": "gCecRlQk0MmQ9Pcwnsfjsg==",
+        "CiphPass": "yCjrCSibGdyU4WY0lQtcKw==",
         "secret": "0123456789asdfgh",
         "UseKey": false,
-        "command": ["uptime", "ls /root/"]
+        "commands": ["uptime"]
     }
 ]
