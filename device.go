@@ -24,7 +24,6 @@ func (d *Device) InitDevice(firstKey string) error {
 		return err
 	}
 	d.PlainPass = plainPass
-	fmt.Printf("PlainPass is: %s", d.PlainPass)
 	client, err := GetClientWithPassword(*d)
 	if err != nil {
 		return err
